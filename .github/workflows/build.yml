@@ -1,0 +1,22 @@
+name: Demo Build Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Display Message
+        run: echo "Build Successful!"
+
+      - name: Show Current Files
+        run: ls -la
